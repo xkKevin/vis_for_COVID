@@ -1,205 +1,234 @@
 国家,累计确诊人数
-Afghanistan,1351
-Albania,678
-Algeria,3127
-Andorra,731
-Angola,25
+Afghanistan,3563
+Albania,842
+Algeria,5182
+Andorra,752
+Angola,36
 Anguilla,3
-Antigua and Barb.,24
-Argentina,3423
-Armenia,1677
-Aruba,100
-Australia,6687
-Austria,15068
-Azerbaijan,1592
-Bahamas,73
-Bahrain,2518
-Bangladesh,4689
-Barbados,76
-Belarus,8773
-Belgium,44293
+Antigua and Barb.,25
+Argentina,5358
+Armenia,2884
+Aruba,101
+Australia,6896
+Austria,15673
+Azerbaijan,2204
+Bahamas,92
+Bahrain,4199
+Bangladesh,12425
+Barbados,82
+Belarus,20168
+Belgium,51420
 Belize,18
-Benin,58
-Bermuda,99
+Benin,140
+Bermuda,118
 Bhutan,7
-Bolivia,807
+Bolivia,2081
 Bonaire Sint Eustatius and Saba,6
-Bosnia and Herz.,1420
-Botswana,22
-Brazil,52995
-British Virgin Islands,6
-Brunei,138
-Bulgaria,1188
-Burkina Faso,626
-Burundi,12
+Bosnia and Herz.,2027
+Botswana,23
+Brazil,135106
+British Virgin Islands,7
+Brunei,141
+Bulgaria,1829
+Burkina Faso,736
+Burundi,19
 Cambodia,122
-Cameroon,1403
-Canada,43877
-Cape Verde,88
-Cayman Is.,66
-Central African Rep.,19
-Chad,40
-Chile,12306
-China,83899
-Colombia,4881
-Congo,200
-Costa Rica,687
-Côte d'Ivoire,1077
-Croatia,2009
-Cuba,1285
+Cameroon,2265
+Canada,64922
+Cape Verde,218
+Cayman Is.,78
+Central African Rep.,94
+Chad,253
+Chile,24581
+China,83976
+Colombia,9456
+Comoros,8
+Congo,274
+Costa Rica,765
+Côte d'Ivoire,1571
+Croatia,2125
+Cuba,1729
 Curaçao,16
-Cyprus,804
-Czech Rep.,7273
-Dem. Rep. Congo,416
-Denmark,8210
-Djibouti,999
+Cyprus,889
+Czech Rep.,8031
+Dem. Rep. Congo,897
+Denmark,10083
+Djibouti,1133
 Dominica,16
-Dominican Rep.,5749
-Ecuador,11183
-Egypt,4092
-El Salvador,261
-Eq. Guinea,212
+Dominican Rep.,9095
+Ecuador,30298
+Egypt,7981
+El Salvador,695
+Eq. Guinea,439
 Eritrea,39
-Estonia,1605
-Ethiopia,117
+Estonia,1720
+Ethiopia,191
 Faeroe Is.,187
-Falkland Is.,12
+Falkland Is.,13
 Fiji,18
-Finland,4395
-France,122577
-Fr. Polynesia,57
-Gabon,172
-Gambia,10
-Georgia,444
-Germany,152438
-Ghana,1279
-Gibraltar,133
-Greece,2490
+Finland,5673
+France,137779
+Fr. Polynesia,60
+Gabon,504
+Gambia,18
+Georgia,615
+Germany,167300
+Ghana,3091
+Gibraltar,144
+Greece,2678
 Greenland,11
-Grenada,15
-Guam,141
-Guatemala,430
-Guernsey,245
-Guinea,954
-Guinea-Bissau,52
-Guyana,73
-Haiti,72
-Honduras,591
-Hungary,2443
-Iceland,1789
-India,24506
-Indonesia,8211
-Iran,88194
-Iraq,1708
-Ireland,18184
-Isle of Man,308
-Israel,15058
-Italy,192994
-Jamaica,288
-Japan,12892
-Jersey,278
-Jordan,441
-Kazakhstan,2482
-Kenya,336
-Kosovo,703
-Kuwait,2614
-Kyrgyzstan,665
+Grenada,21
+Guam,151
+Guatemala,832
+Guernsey,252
+Guinea,1927
+Guinea-Bissau,564
+Guyana,93
+Haiti,129
+Honduras,1685
+Hong Kong,0
+Hungary,3178
+Iceland,1801
+India,56342
+Indonesia,12776
+International,696
+Iran,103135
+Iraq,2543
+Ireland,22385
+Isle of Man,329
+Israel,16381
+Italy,215858
+Jamaica,488
+Japan,15547
+Jersey,293
+Jordan,494
+Kazakhstan,4690
+Kenya,607
+Kosovo,861
+Kuwait,6567
+Kyrgyzstan,906
 Lao PDR,19
-Latvia,784
-Lebanon,696
-Liberia,117
-Libya,61
-Liechtenstein,82
-Lithuania,1410
-Luxembourg,3695
-Macedonia,1326
-Madagascar,122
-Malawi,33
-Malaysia,5691
-Maldives,128
-Mali,325
-Malta,447
-Mauritania,7
-Mauritius,331
-Mexico,12872
-Moldova,3110
-Monaco,94
-Mongolia,36
-Montenegro,319
+Latvia,909
+Lebanon,784
+Liberia,189
+Libya,64
+Liechtenstein,83
+Lithuania,1433
+Luxembourg,3859
+Macedonia,1572
+Madagascar,193
+Malawi,43
+Malaysia,6467
+Maldives,642
+Mali,650
+Malta,486
+Mauritania,8
+Mauritius,332
+Mexico,29616
+Moldova,4605
+Monaco,95
+Mongolia,42
+Montenegro,324
 Montserrat,11
-Morocco,3758
-Mozambique,65
-Myanmar,144
+Morocco,5548
+Mozambique,81
+Myanmar,176
 Namibia,16
-Nepal,49
-Netherlands,36535
+Nepal,101
+Netherlands,41774
 New Caledonia,18
-New Zealand,1117
-Nicaragua,11
-Niger,681
-Nigeria,1095
-N. Mariana Is.,14
-Norway,7408
-Oman,1790
-Pakistan,11940
-Palestine,340
-Panama,5338
+New Zealand,1141
+Nicaragua,16
+Niger,781
+Nigeria,3526
+N. Mariana Is.,15
+Norway,7995
+Oman,2958
+Pakistan,25837
+Palestine,547
+Panama,7868
 Papua New Guinea,8
-Paraguay,223
-Peru,21648
-Philippines,7192
-Poland,10892
-Portugal,22797
-Puerto Rico,1416
-Qatar,8525
-Romania,10417
-Russia,68622
-Rwanda,176
+Paraguay,462
+Peru,58526
+Philippines,10343
+Poland,15047
+Portugal,26715
+Puerto Rico,2031
+Qatar,18890
+Romania,14499
+Russia,177160
+Rwanda,271
 Saint Kitts and Nevis,15
-Saint Lucia,15
-St. Vin. and Gren.,14
-San Marino,513
-São Tomé and Principe,8
-Saudi Arabia,15102
-Senegal,545
-Serbia,7483
+Saint Lucia,18
+St. Vin. and Gren.,17
+San Marino,622
+São Tomé and Principe,187
+Saudi Arabia,33731
+Senegal,1492
+Serbia,9848
 Seychelles,11
-Sierra Leone,82
-Singapore,11178
-Sint Maarten (Dutch part),73
-Slovakia,1360
-Slovenia,1373
-Somalia,328
-South Africa,4220
-Korea,10718
-S. Sudan,5
-Spain,219764
-Sri Lanka,420
-Sudan,174
+Sierra Leone,231
+Singapore,20939
+Sint Maarten (Dutch part),76
+Slovakia,1445
+Slovenia,1449
+Somalia,928
+South Africa,8232
+Korea,10822
+S. Sudan,90
+Spain,221447
+Sri Lanka,824
+Sudan,930
 Suriname,10
-Swaziland,40
-Sweden,17567
-Switzerland,28595
-Syria,42
-Tanzania,300
-Thailand,2854
-Timor,24
-Togo,90
-Trinidad and Tobago,115
-Tunisia,922
-Turkey,104912
-Turks and Caicos Is.,11
-Uganda,75
-Ukraine,8125
-United Arab Emirates,9281
-United Kingdom,143464
-United States,890524
-U.S. Virgin Is.,54
-Uruguay,563
-Uzbekistan,1836
-Vatican,9
-Venezuela,318
-Vietnam,272
-Yemen,1
-Zambia,84
-Zimbabwe,29
+Swaziland,153
+Sweden,24623
+Switzerland,30043
+Syria,45
+Taiwan,440
+Tajikistan,461
+Tanzania,509
+Thailand,2992
+Timor-Leste,24
+Togo,135
+Trinidad and Tobago,116
+Tunisia,1026
+Turkey,133721
+Turks and Caicos Is.,12
+Uganda,101
+Ukraine,13691
+United Arab Emirates,16240
+United Kingdom,206715
+United States,1256972
+U.S. Virgin Is.,66
+Uruguay,684
+Uzbekistan,2298
+Vatican,12
+Venezuela,381
+Vietnam,288
+W. Sahara,6
+World,3807852
+Yemen,26
+Zambia,153
+Zimbabwe,34
+Aland,0
+American Samoa,0
+Br. Indian Ocean Ter.,0
+Dem. Rep. Korea,0
+Fr. S. Antarctic Lands,0
+Heard I. and McDonald Is.,0
+Kiribati,0
+Lesotho,0
+Micronesia,0
+N. Cyprus,0
+Niue,0
+Palau,0
+S. Geo. and S. Sandw. Is.,0
+Saint Helena,0
+Samoa,0
+Siachen Glacier,0
+Solomon Is.,0
+St. Pierre and Miquelon,0
+Timor-Leste,0
+Tonga,0
+Turkmenistan,0
+Vanuatu,0

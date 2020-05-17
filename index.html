@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Vis for COVID</title>
     <script src="./js/jquery.min.js"></script>
     <link href="./css/bootstrap.min.css" rel="stylesheet">
     <script src="./js/bootstrap.min.js"></script>
@@ -11,6 +11,7 @@
     <script src="./js/charts.js"></script>
     <script src="./js/handle_data.js"></script>
     <script src="./js/d3.v4.min.js"></script>
+    <script src="http://pv.sohu.com/cityjson?ie=utf-8"></script>
     <style>
         h3 {
             margin-top: 25px;
@@ -22,6 +23,12 @@
         font {
             color: red;
             font-weight: bold;
+        }
+        .red {
+            background-color: lightcoral;
+        }
+        .green {
+            background-color: lightgreen;
         }
     </style>
 </head>
@@ -44,14 +51,12 @@
         ——上周确诊增速最快国家：<span class="26"><font>&nbsp;Null&nbsp;</font></span>（<span class="27"><font>&nbsp;Null&nbsp;</font></span>）、<span class="28"><font>&nbsp;Null&nbsp;</font></span>（<span class="29"><font>&nbsp;Null&nbsp;</font></span>） <br>
         ——上周死亡增速最快国家：<span class="30"><font>&nbsp;Null&nbsp;</font></span>（<span class="31"><font>&nbsp;Null&nbsp;</font></span>）、<span class="32"><font>&nbsp;Null&nbsp;</font></span>（<span class="33"><font>&nbsp;Null&nbsp;</font></span>） <br>
     </div>
-
     <h3>2.1 全球累计确诊：<span class="2"><font>&nbsp;Null&nbsp;</font></span>例，死亡：<span class="3"><font>&nbsp;Null&nbsp;</font></span>例</h3>
-    主要分布在 <span class="2_1_countries"><font>&nbsp;Null&nbsp;</font></span>
+    主要分布在 <span class="2_1_countries"><font>&nbsp;Null&nbsp;</font></span>。
     <div id="2_1" style="width: 800px;height:470px;"></div>
-    <div>图 2-1&nbsp;全球累计确诊分布图（截至 <span class="end_date_month"><font>&nbsp;Null&nbsp;</font></span>月 <span class="end_date_day"><font>&nbsp;Null&nbsp;</font></span>日）</div>
+    <div class="green">图 2-1&nbsp;全球累计确诊分布图</div>
     <div id="2_2" style="width: 800px;height:470px;"></div>
-    <div>图 2-2&nbsp;全球累计死亡分布图（截至 <span class="end_date_month"><font>&nbsp;Null&nbsp;</font></span>月 <span class="end_date_day"><font>&nbsp;Null&nbsp;</font></span>日）</div>
-    <hr>
+    <div class="red">图 2-2&nbsp;全球累计死亡分布图</div>
     <div class="row" style="width: 800px;">
         <div id="2_3_a" class="col-6" style="margin: 0; padding: 0; height: 230px;"></div>
         <div id="2_3_b" class="col-6" style="margin: 0; padding: 0; height: 230px;"></div>
@@ -67,12 +72,20 @@
         <div>图2-4&nbsp;全球确诊率增长曲线（a）、病死率增长曲线（b）</div>
         <div>注：确诊率为累计确诊人数占总人口的百分比，病死率为累计死亡人数占累计确诊人数的百分比。</div>
     </div>
+    <div class="row" style="width: 800px;">
+        <div id="2_5_a" class="col-6" style="margin: 0; padding: 0; height: 230px;"></div>
+        <div id="2_5_b" class="col-6" style="margin: 0; padding: 0; height: 230px;"></div>
+        <div class="col-6" style="text-align: center;">(a)</div>
+        <div class="col-6" style="text-align: center;">(b)</div>
+        <div>图2-5&nbsp;全球新增确诊人数增长曲线（a）、新增死亡人数增长曲线（b）</div>
+    </div>
     <div id="2_5" style="width: 800px;height:430px;"></div>
     <div>图 2-5&nbsp;全球累计确诊人数来源构成（显示前 15 个国家，包含法国养老院数据，截至 <span class= "end_date_month"><font>&nbsp;Null&nbsp;</font></span>月 <span class="end_date_day"><font>&nbsp;Null&nbsp;</font></span>日）</div>
     <div id="2_6" style="width: 800px;height:430px;"></div>
     <div>图 2-6&nbsp;全球累计死亡人数来源构成（显示前 15 个国家，包含法国养老院数据，截至 <span class= "end_date_month"><font>&nbsp;Null&nbsp;</font></span>月 <span class="end_date_day"><font>&nbsp;Null&nbsp;</font></span>日）</div>
 
-    <h3>2.2 全球本周新增确诊<span class="14"><font>&nbsp;Null&nbsp;</font></span>例，死亡：<span class="16"><font>&nbsp;Null&nbsp;</font></span>例</h3>
+    <!--<h3>2.2 全球本周新增确诊<span class="14"><font>&nbsp;Null&nbsp;</font></span>例，死亡：<span class="16"><font>&nbsp;Null&nbsp;</font></span>例</h3>-->
+    <h3>2.2 全球确诊率：<span class="4"><font>&nbsp;Null&nbsp;</font></span>，病死率：<span class="5"><font>&nbsp;Null&nbsp;</font></span></h3>
     <div id="2_7" style="width: 800px;height:880px;"></div>
     <div>图2-7&nbsp;各国确诊率（确诊率为累计确诊人数占总人口的百分比，仅显示累计确诊人数超过2000的国家中确诊率前20个国家）</div>
     <div id="2_8" style="width: 800px;height:880px;"></div>
@@ -102,9 +115,15 @@
     <div id="2_15" style="width: 800px;"></div>
     <div>图2-15&nbsp;本周较上周新增死亡人数增速（仅显示增速绝对值大于等于20%的国家）</div>
     <div>注：本周较上周新增死亡人数增速=（本周新增死亡人数-上周新增死亡人数）/上周新增死亡人数</div>
+
+    <div id="2_16" style="width: 800px;height:860px;"></div>
+    <div id="2_17" style="width: 800px;"></div>
+    <div id="2_18" style="width: 800px;"></div>
 </div>
 
 <script>
+    var imagesInfo = {};
+    var cases_3 = [];
     d3.csv("./export/basic_info.csv", function (error, csvdata) {
         if(error){
             console.log(error);
@@ -116,7 +135,8 @@
                 percent_num: [4,5],
                 percent_rate: [15,17],
                 percent_int_num: [27,29,31,33],
-                countries: [6,8,10,12,18,20,22,24,26,28,30,32]
+                countries: [6,8,10,12,18,20,22,24,26,28,30,32],
+                cases_3: [6,8,34]
             };
             let data = null;
             csvdata.forEach(function (value, index) {
@@ -144,6 +164,8 @@
                     }
                 }else if (data_format.percent_int_num.includes(index)){
                     data = Math.round(data * 100) + "%"
+                }else if (data_format.cases_3.includes(index)){
+                    cases_3.push(data);
                 }
                 $("."+index).text(data);
             });
@@ -151,6 +173,7 @@
                 if(error){
                     console.log(error);
                 }else{
+                    $(".2_1_countries").text(cases_3.join("、"));
                     worldMap(csvdata, '累计确诊人数', '2_1', $(".7").text().replace(/,/g,""));
                 }
             });
@@ -194,6 +217,22 @@
             console.log(error);
         }else{
             linechart_rate(csvdata, "2_4_b")
+        }
+    });
+
+    d3.csv("./export/2-5-a.csv", function (error, csvdata) {
+        if(error){
+            console.log(error);
+        }else{
+            linechart_num(csvdata, "2_5_a")
+        }
+    });
+
+    d3.csv("./export/2-5-b.csv", function (error, csvdata) {
+        if(error){
+            console.log(error);
+        }else{
+            linechart_num(csvdata, "2_5_b")
         }
     });
 
@@ -289,6 +328,30 @@
         }
     });
 
+    d3.csv("./export/appendix-1.csv", function (error, csvdata) {
+        if(error){
+            console.log(error);
+        }else{
+            bi_directional_barchart(csvdata, "本周较上周新增确诊人数增速", "2_17");
+        }
+    });
+
+    d3.csv("./export/appendix-2.csv", function (error, csvdata) {
+        if(error){
+            console.log(error);
+        }else{
+            bi_directional_barchart(csvdata, "本周较上周新增死亡人数增速", "2_18");
+        }
+    });
+
+    d3.csv("./export/appendix-3.csv", function (error, csvdata) {
+        if(error){
+            console.log(error);
+        }else{
+            barchart_num(csvdata.slice(0,20), "总检测数", '2_16');
+        }
+    });
+
 
     // var word_data = [{'name': 'Israel', 'value': 15398}, {'name': 'Kazakhstan', 'value': 2652}, {'name': 'Dem. Rep. Congo', 'value': 442}, {'name': 'Singapore', 'value': 13624}, {'name': 'Japan', 'value': 13231}, {'name': 'Burkina Faso', 'value': 629}, {'name': 'Palestine', 'value': 441}, {'name': 'Bahrain', 'value': 2588}, {'name': 'Greece', 'value': 2506}, {'name': 'Chile', 'value': 12858}, {'name': 'Pakistan', 'value': 12723}, {'name': 'United States', 'value': 939235}, {'name': 'Peru', 'value': 25331}, {'name': 'Sweden', 'value': 18234}, {'name': 'India', 'value': 26496}, {'name': 'Ireland', 'value': 18561}, {'name': 'Moldova', 'value': 3110}, {'name': 'Chad', 'value': 40}, {'name': 'Sint Maarten', 'value': 38}, {'name': 'Cuba', 'value': 1285}, {'name': 'Djibouti', 'value': 1008}, {'name': 'Nigeria', 'value': 1095}, {'name': 'Antigua and Barbuda', 'value': 24}, {'name': 'Netherlands', 'value': 37190}, {'name': 'Cameroon', 'value': 1518}, {'name': 'Uganda', 'value': 75}, {'name': 'Central African Rep.', 'value': 19}, {'name': 'Benin', 'value': 58}, {'name': 'Jordan', 'value': 444}, {'name': 'Guyana', 'value': 73}, {'name': 'Canada', 'value': 45354}, {'name': 'United Arab Emirates', 'value': 9813}, {'name': 'Qatar', 'value': 9358}, {'name': 'Zambia', 'value': 84}, {'name': 'Guinea', 'value': 996}, {'name': 'The Republic of Equatorial Guinea', 'value': 258}, {'name': 'Luxembourg', 'value': 3711}, {'name': 'Niger', 'value': 681}, {'name': 'Albania', 'value': 712}, {'name': 'Diamond Princess Cruise Ship', 'value': 712}, {'name': 'Uruguay', 'value': 563}, {'name': 'Azerbaijan', 'value': 1687}, {'name': 'Somalia', 'value': 390}, {'name': 'Spain', 'value': 223759}, {'name': 'Sierra Leone', 'value': 86}, {'name': 'Latvia', 'value': 804}, {'name': 'Poland', 'value': 11273}, {'name': 'Sudan', 'value': 213}, {'name': 'Honduras', 'value': 562}, {'name': 'Dominican Rep.', 'value': 5749}, {'name': 'Kenya', 'value': 343}, {'name': 'Germany', 'value': 154175}, {'name': 'Guam', 'value': 136}, {'name': 'El Salvador', 'value': 261}, {'name': 'Faroe', 'value': 187}, {'name': 'Saudi Arabia', 'value': 16299}, {'name': 'New Zealand', 'value': 1142}, {'name': 'Ghana', 'value': 1279}, {'name': 'Belgium', 'value': 45325}, {'name': 'Bosnia and Herzegovina', 'value': 1458}, {'name': 'Madagascar', 'value': 123}, {'name': 'Malta', 'value': 447}, {'name': 'Brazil', 'value': 59324}, {'name': 'Oman', 'value': 1905}, {'name': 'Switzerland', 'value': 28619}, {'name': 'Tunisia', 'value': 939}, {'name': 'Argentina', 'value': 3780}, {'name': 'Slovakia', 'value': 1373}, {'name': 'Philippines', 'value': 7294}, {'name': 'Saint Vincent and the Grenadines', 'value': 14}, {'name': 'Mongolia', 'value': 38}, {'name': 'Lithuania', 'value': 1426}, {'name': 'Cyprus', 'value': 810}, {'name': 'Haiti', 'value': 72}, {'name': 'China', 'value': 84338}, {'name': 'Botswana', 'value': 22}, {'name': 'Angola', 'value': 25}, {'name': 'Myanmar', 'value': 146}, {'name': 'Finland', 'value': 4475}, {'name': 'Mozambique', 'value': 70}, {'name': 'Maldives', 'value': 141}, {'name': 'Australia', 'value': 6695}, {'name': 'Zimbabwe', 'value': 31}, {'name': 'Puerto Rico', 'value': 1416}, {'name': 'Nicaragua', 'value': 11}, {'name': 'Egypt', 'value': 4319}, {'name': 'Republic of Serbia', 'value': 8482}, {'name': 'Vietnam', 'value': 270}, {'name': 'Senegal', 'value': 614}, {'name': 'Gabon', 'value': 176}, {'name': 'Colombia', 'value': 5142}, {'name': 'Iceland', 'value': 1789}, {'name': 'Indonesia', 'value': 8607}, {'name': 'Ethiopia', 'value': 122}, {'name': 'Sao Tome and Principe', 'value': 8}, {'name': 'Barbados', 'value': 76}, {'name': 'Afghanistan', 'value': 1463}, {'name': 'Turkey', 'value': 107773}, {'name': 'Bailiwick of Jersey', 'value': 276}, {'name': 'Slovenia', 'value': 1388}, {'name': 'Bulgaria', 'value': 1234}, {'name': 'Bolivia', 'value': 703}, {'name': 'Andorra', 'value': 738}, {'name': 'Swaziland', 'value': 56}, {'name': 'Russia', 'value': 74588}, {'name': 'Nepal', 'value': 49}, {'name': 'Mexico', 'value': 13842}, {'name': 'Uzbekistan', 'value': 1836}, {'name': 'Bahamas', 'value': 72}, {'name': 'Brunei', 'value': 138}, {'name': 'S. Sudan', 'value': 6}, {'name': 'Morocco', 'value': 3897}, {'name': 'Liberia', 'value': 120}, {'name': 'Guatemala', 'value': 384}, {'name': 'Norway', 'value': 7493}, {'name': 'Togo', 'value': 90}, {'name': 'United Kingdom', 'value': 148377}, {'name': 'Malaysia', 'value': 5742}, {'name': 'Mauritius', 'value': 331}, {'name': 'Mali', 'value': 370}, {'name': 'Martinique', 'value': 170}, {'name': 'Ecuador', 'value': 22719}, {'name': 'Italy', 'value': 195351}, {'name': 'Kampuchea (Cambodia )', 'value': 122}, {'name': 'Congo', 'value': 200}, {'name': 'Belarus', 'value': 9590}, {'name': 'Algeria', 'value': 3256}, {'name': 'Paraguay', 'value': 223}, {'name': 'Libya', 'value': 61}, {'name': 'Reunion', 'value': 412}, {'name': 'Denmark', 'value': 8445}, {'name': 'Papua New Guinea', 'value': 8}, {'name': 'Czech Republic', 'value': 7333}, {'name': 'France', 'value': 124114}, {'name': 'Bangladesh', 'value': 4998}, {'name': 'Isle of Man', 'value': 308}, {'name': 'Costa Rica', 'value': 686}, {'name': 'Trinidad and Tobago', 'value': 115}, {'name': 'Romania', 'value': 10635}, {'name': 'Hungary', 'value': 2443}, {'name': 'Estonia', 'value': 1635}, {'name': 'Korea', 'value': 10728}, {'name': 'Ukraine', 'value': 8125}, {'name': 'North Macedonia', 'value': 1367}, {'name': 'Ivory Coast', 'value': 1111}, {'name': 'Republic of Rwanda', 'value': 176}, {'name': 'Thailand', 'value': 2922}, {'name': 'Austria', 'value': 15128}, {'name': 'Lebanon', 'value': 704}, {'name': 'Gibraltar', 'value': 133}, {'name': 'Guernsey', 'value': 245}, {'name': 'SriLanka', 'value': 460}, {'name': 'San Marino', 'value': 513}, {'name': 'Venezuela', 'value': 318}, {'name': 'Iran', 'value': 89328}, {'name': 'French Guiana', 'value': 109}, {'name': 'Jamaica', 'value': 257}, {'name': 'Kuwait', 'value': 2892}, {'name': 'South Africa', 'value': 4361}, {'name': 'Croatia', 'value': 2016}, {'name': 'Malawi', 'value': 33}, {'name': 'Tanzania', 'value': 300}, {'name': 'Georgia', 'value': 456}, {'name': 'Armenia', 'value': 1677}, {'name': 'Portugal', 'value': 23392}, {'name': 'Kingdom of Bhutan', 'value': 7}, {'name': 'Iraq', 'value': 1763}, {'name': 'Panama', 'value': 5166}, {'name': 'Syria', 'value': 42}, {'name': 'Cayman Is', 'value': 66}, {'name': 'Gambia', 'value': 10}, {'name': 'Fiji', 'value': 18}, {'name': 'Suriname', 'value': 10}, {'name': 'Status Civitatis Vaticanae', 'value': 9}, {'name': 'French Polynesia', 'value': 57}, {'name': 'Monaco', 'value': 98}, {'name': 'Liechtenstein', 'value': 82}, {'name': 'Greenland', 'value': 11}, {'name': 'St.Lucia', 'value': 15}, {'name': 'Seychelles', 'value': 11}, {'name': 'Namibia', 'value': 16}, {'name': 'Yemen', 'value': 1}, {'name': 'Belize', 'value': 18}, {'name': 'Mauritania', 'value': 7}, {'name': 'Laos', 'value': 19}, {'name': 'Saint Barthelemy', 'value': 3}, {'name': 'Reunion Island', 'value': 6}, {'name': 'Grand Princess', 'value': 21}, {'name': 'United Kingdom of Great Britain and Ireland', 'value': 20}, {'name': 'Northern Ireland', 'value': 1}];
     // worldMap(word_data, '累计确诊人数', '2_1');
@@ -370,6 +433,9 @@
 
     // bi_directional_barchart(data_14, "本周较上周新增确诊人数增速", "2_14");
     // bi_directional_barchart(data_14, "本周较上周新增死亡人数增速", "2_15");
+    //  console.log(returnCitySN.cname);
+    console.log(JSON.stringify(returnCitySN));
+    // {"cip":"112.192.209.176","cid":"510800","cname":"四川省广元市"}
 </script>
 </body>
 </html>
